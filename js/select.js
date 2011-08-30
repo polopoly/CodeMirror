@@ -163,6 +163,7 @@ var select = {};
       }
 
       var containing = range.parentElement();
+      if (containing == null) return null;
       if (!isAncestor(document.body, containing)) return null;
       if (!containing.firstChild) return nodeAtStartOf(containing);
 
